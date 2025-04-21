@@ -17,13 +17,14 @@ import tailwind from "@/public/icons/tailwindcss.png"
 import node from "@/public/icons/nodejs.png"
 import mongo from "@/public/icons/mongodb.png"
 import postgres from "@/public/icons/postgresql.png"
-import postgres from "@/public/icons/c#.png"
+import csharp from "@/public/icons/csharp.png" // Corrigido aqui
+
 // Versionamento e ferramentas
 import git from "@/public/icons/git.png"
 import github from "@/public/icons/github.png"
 
 const frontIcons = [html, css, js, ts, react, next, tailwind]
-const backIcons = [node, express, mongo, postgres]
+const backIcons = [node, mongo, postgres, csharp]
 const toolsIcons = [git, github]
 
 const Icons = () => {
@@ -48,12 +49,12 @@ const Icons = () => {
         return () => window.removeEventListener("resize", handleResize)
     }, [])
 
-    const renderIcons = (title: string, icons: any[]) => (
+    const renderIcons = (title, icons) => (
         <div className="mb-8">
             <h3 className="text-center text-xl font-semibold text-text-primary mb-4">{title}</h3>
             <Marquee speed={speed} gradient={false}>
                 {icons.map((icon) => (
-                    <div key={icon.src} style={{ marginRight: `${gap}px` }}>
+                    <div key={icon} style={{ marginRight: `${gap}px` }}>
                         <Image
                             src={icon}
                             alt="icon"
