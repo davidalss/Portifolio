@@ -9,7 +9,6 @@ import html from "@/public/icons/html.png"
 import css from "@/public/icons/css.png"
 import js from "@/public/icons/javascript.png"
 import ts from "@/public/icons/typescript.png"
-import react from "@/public/icons/react.png"
 import next from "@/public/icons/nextjs.png"
 import tailwind from "@/public/icons/tailwindcss.png"
 
@@ -17,7 +16,7 @@ import tailwind from "@/public/icons/tailwindcss.png"
 import node from "@/public/icons/nodejs.png"
 import mongo from "@/public/icons/mongodb.png"
 import postgres from "@/public/icons/postgresql.png"
-import csharp from "@/public/icons/csharp.png" // Corrigido aqui
+import csharp from "@/public/icons/csharp.png"
 
 // Versionamento e ferramentas
 import git from "@/public/icons/git.png"
