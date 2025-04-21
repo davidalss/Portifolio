@@ -32,10 +32,10 @@ const Hero = () => {
                     </div>
                     estudando Full-Stack mas meu foco é me tornar um DEV 
                     <div className="whitespace-nowrap relative w-fit lg:mx-0 mx-auto inline-block">
-                        <p className="relative z-10">Back-End</p>
+                        <p className="relative z-10">Back-End. </p>
                         <div className="absolute inset-0 -left-1 h-full bg-linear-[0deg,#f2ddb0_0%,#f2ddb0_50%,transparent_50%,transparent] animate-stretch"></div>
                     </div>
-                    Em constante aprendizado sobre ferramentas e práticas modernas de desenvolvimento, buscando aplicar boas práticas de código e me manter atualizado com as tendências e avanços da área para entregar soluções de qualidade.
+                     Em constante aprendizado sobre ferramentas e práticas modernas de desenvolvimento, buscando aplicar boas práticas de código e me manter atualizado com as tendências e avanços da área para entregar soluções de qualidade.
                 </div>
                 <a
                     className="inline-block rounded-sm bg-primary lg:px-6 px-12 lg:py-3 py-4 sm:w-fit w-full xl:text-xl lg:text-lg tracking-wider font-medium text-white transition hover:scale-110 hover:shadow-xl outline-hidden lg:mb-16 mb-8"
