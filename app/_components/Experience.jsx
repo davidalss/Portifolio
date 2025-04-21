@@ -93,8 +93,8 @@ const Experience = () => {
                         </Link>
                         <a
                             className="flex items-center gap-3 md:w-auto w-full justify-center rounded  border border-current px-6 py-3 text-sm font-medium text-primary transition hover:scale-110 hover:shadow-xl outline-hidden"
-                            download="Abdalmoamen Abbara.pdf"
-                            href={"Abdalmoamen Abbara.pdf"}
+                            download="CurrículoTI.pdf"
+                            href={"CurrículoTI.pdf"}
                         >
                             <FiDownload className="size-6" />
                             Download CV

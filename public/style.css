@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "abeatbyKai";
+    font-style: normal;
+    font-weight: normal;
+    src: local("abeatbyKai"), url("ABEAKRG.woff") format("woff");
+}
+
+@font-face {
+    font-family: "abeatbyKai";
+    font-style: normal;
+    font-weight: normal;
+    src: local("abeatbyKai"), url("abeatbyKaiRegular.woff") format("woff");
+}
+* {
+    font-family: abeatbyKai, sans-serif;
+}
