@@ -1,19 +1,19 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const data = [
   {
-    title: "Desenvolvimento Full Stack (Backend e Frontend)",
-    text: "Desenvolvo soluções completas em aplicações web e sistemas corporativos, com expertise tanto no front-end quanto no back-end. Minhas principais tecnologias incluem HTML, CSS, JavaScript, C#, Angular, entre outras. Priorizo a criação de código limpo, reutilizável e escalável, sempre com foco em desempenho e usabilidade.",
+    title: 'Desenvolvimento Full Stack (Backend e Frontend)',
+    text: 'Desenvolvo soluções completas em aplicações web e sistemas corporativos, com expertise tanto no front-end quanto no back-end. Minhas principais tecnologias incluem HTML, CSS, JavaScript, C#, Angular, entre outras. Priorizo a criação de código limpo, reutilizável e escalável, sempre com foco em desempenho e usabilidade.',
   },
   {
-    title: "Análise e Visualização de Dados (SQL, BigQuery, Pandas, DAX, B.I)",
-    text: "Especialista em transformar dados brutos em insights estratégicos que orientam decisões empresariais. Utilizo ferramentas como SQL, Power BI, Tableau, Excel Avançado, Looker Studio e BigQuery para criar dashboards interativos e relatórios dinâmicos, gerando valor para projetos e operações.",
+    title: 'Análise e Visualização de Dados (SQL, BigQuery, Pandas, DAX, B.I)',
+    text: 'Especialista em transformar dados brutos em insights estratégicos que orientam decisões empresariais. Utilizo ferramentas como SQL, Power BI, Tableau, Excel Avançado, Looker Studio e BigQuery para criar dashboards interativos e relatórios dinâmicos, gerando valor para projetos e operações.',
   },
   {
-    title: "Qualidade e Otimização de Processos",
-    text: "Atuo na melhoria contínua e otimização de processos operacionais, utilizando ferramentas como SAP, Power Apps, Microsoft Forms e SharePoint. Com foco em automação e redução de erros, integro soluções tecnológicas para aumentar a eficiência e garantir a qualidade em todas as etapas.",
+    title: 'Qualidade e Otimização de Processos',
+    text: 'Atuo na melhoria contínua e otimização de processos operacionais, utilizando ferramentas como SAP, Power Apps, Microsoft Forms e SharePoint. Com foco em automação e redução de erros, integro soluções tecnológicas para aumentar a eficiência e garantir a qualidade em todas as etapas.',
   },
 ];
 
@@ -34,7 +34,7 @@ const WhatIDo = () => {
       className="bg-section-secondary lg:py-20 py-10 px-section"
     >
       <div className="container mx-auto flex lg:flex-row flex-col lg:gap-0 gap-8 items-center justify-between">
-        {/* left-side */}
+        {/* Left-side */}
         <div className="lg:max-w-[40%] lg:text-left text-center">
           <h2 className="lg:text-5xl font-semibold md:text-3xl text-2xl text-[#333] lg:mb-6 mb-4">
             O que eu faço?
@@ -49,6 +49,7 @@ const WhatIDo = () => {
           <a
             className="lg:mt-12 mt-4 inline-block rounded md:w-auto w-full bg-primary px-6 py-3 lg:text-lg tracking-wider font-medium text-white transition hover:scale-110 hover:shadow-xl outline-hidden"
             href="#contact"
+            aria-label="Ir para a seção de contato"
           >
             Fale Comigo!
           </a>

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 .px-section {
     @apply 2xl:px-12 lg:px-8 px-4;

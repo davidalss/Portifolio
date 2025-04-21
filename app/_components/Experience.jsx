@@ -1,11 +1,12 @@
-"use client"
-import Image from "next/image"
-import React from "react"
-import avatar from "@/public/avatar2.png"
-import { FaFacebookF, FaGithub, FaInstagram, FaLinkedin, FaGitlab } from "react-icons/fa"
-import { FiDownload } from "react-icons/fi"
-import Link from "next/link"
-import { motion } from "framer-motion"
+'use client';
+
+import Image from "next/image";
+import React from "react";
+import avatar from "@/public/avatar2.png";
+import { FaFacebookF, FaGithub, FaInstagram, FaLinkedin, FaGitlab } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const socialLinks = [
     { icon: <FaGithub />, link: "https://github.com/davidalss" },
@@ -30,7 +31,7 @@ const Experience = () => {
             className="px-section"
         >
             <div className="container mx-auto shadow-experience-double relative lg:top-20 top-10 flex lg:flex-row flex-col justify-between items-center 2xl:gap-32 xl:gap-24 md:gap-10 gap-16 xl:px-28 lg:px-12 px-4 lg:py-20 py-8 rounded-2xl bg-white ">
-                
+
                 {/* Image Section */}
                 <div className="xl:w-[424px] lg:w-[380px] md:w-[330px] w-[270px] xl:h-[468px] lg:h-[400px] md:h-[350px] h-[290px] bg-section-secondary overflow-visible rounded-[10px] relative z-10">
                     <div className="absolute inset-0 bg-section-secondary rounded-[10px] z-10"></div>
@@ -92,7 +93,7 @@ const Experience = () => {
                 </div>
             </div>
         </motion.div>
-    )
-}
+    );
+};
 
-export default Experience
+export default Experience;

@@ -7,16 +7,18 @@ import Slider from "react-slick"
 import createImageUrlBuilder from "@sanity/image-url"
 import { motion } from "framer-motion"
 
-const POSTS_QUERY = `*[_type=="blog"]{poster,date,blogName,link, description}`
+const POSTS_QUERY = `*[_type=="blog"]{poster,date,blogName,link}`
 const options = { next: { revalidate: 30 } }
 
 export const formatDate = (isoDateString) => {
     const date = new Date(isoDateString)
-    const options = { year: 'numeric', month: 'long', day: 'numeric' }
-    return date.toLocaleDateString('pt-BR', options)
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, "0")
+    const day = String(date.getDate()).padStart(2, "0")
+    return `${year}-${month}-${day}`
 }
 
-const Card = ({ img, date, title, url, description }) => (
+const Card = ({ img, date, title, url }) => (
     <Link
         href={url}
         className="rounded-lg blog overflow-hidden text-left shadow-card h-full border block border-section-secondary"
@@ -31,7 +33,6 @@ const Card = ({ img, date, title, url, description }) => (
         <div className="p-6">
             <p className="text-sm text-text-secondary mb-2">{date}</p>
             <p className="text-lg text-[#333] line-clamp-2">{title}</p>
-            <p className="text-sm text-text-secondary line-clamp-3 mt-2">{description}</p>
         </div>
     </Link>
 )
@@ -40,21 +41,23 @@ const Blog = () => {
     const [blogs, setBlogs] = useState([])
     const builder = createImageUrlBuilder(client)
 
-    const urlFor = (source) => builder.image(source)
-
     const fetch = async () => {
-        const blogs = await client.fetch(POSTS_QUERY, {}, options)
-        const validBlogs = blogs.filter(
-            blog => blog?.poster?.asset?._ref && blog?.blogName && blog?.link
-        )
-        setBlogs(validBlogs)
+        try {
+            const blogs = await client.fetch(POSTS_QUERY, {}, options)
+            setBlogs(blogs)
+        } catch (error) {
+            console.error("Error fetching blogs:", error)
+            setBlogs([]) // Garantir que seja um array mesmo se der erro
+        }
     }
 
     useEffect(() => {
         fetch()
     }, [])
 
-    const settings = {
+    const urlFor = (source) => builder.image(source)
+
+    var settings = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -95,40 +98,32 @@ const Blog = () => {
             className="container mx-auto text-center py-20 px-section overflow-x-hidden"
         >
             <h2 className="xl:text-5xl font-semibold md:text-3xl text-2xl xl:leading-[56px] mb-6">
-                Explorando Tecnologia, Processos e Dados: O Meu Blog
+                My Blog
             </h2>
             <p className="text-text-secondary text-lg mb-16 max-w-[650px] mx-auto">
-                Neste blog, compartilho insights sobre a transição para o mercado de tecnologia, minhas experiências com ferramentas como Power BI, SAP, SQL, além de dicas de boas práticas de desenvolvimento e automação. A ideia é dividir meus conhecimentos para ajudar outros profissionais da área e aqueles que estão começando. Fique à vontade para explorar e aprender mais sobre essas tecnologias que estão moldando o futuro.
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration.
             </p>
-
-            {Array.isArray(blogs) && blogs.length > 0 ? (
+            {blogs.length > 0 ? (
                 <Slider {...settings}>
                     {blogs.map((blog, index) => (
                         <div key={index} className="px-3">
                             <Card
                                 date={formatDate(blog.date)}
                                 img={
-                                    blog?.poster?.asset?._ref
+                                    blog.poster?.asset?._ref
                                         ? urlFor(blog.poster.asset._ref).url()
-                                        : "/placeholder.jpg"
+                                        : "/default-image.jpg" // Imagem padrão caso não tenha
                                 }
                                 title={blog.blogName}
                                 url={blog.link}
-                                description={blog.description}
                             />
                         </div>
                     ))}
                 </Slider>
             ) : (
-                <p className="text-center text-gray-400">Nenhum blog encontrado.</p>
+                <p>No blogs available</p> // Mensagem caso não haja blogs
             )}
-
-            <a 
-                href="#contact" 
-                className="mt-8 inline-block rounded bg-primary px-6 py-3 text-white font-medium transition hover:scale-110 hover:shadow-xl"
-            >
-                Entre em Contato e Compartilhe suas Ideias!
-            </a>
         </motion.div>
     )
 }

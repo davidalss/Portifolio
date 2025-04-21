@@ -1,27 +1,29 @@
-"use client"
-import Link from "next/link"
-import React from "react"
-import { motion } from "framer-motion"
+'use client';
+import Link from 'next/link';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const ProjectIdea = () => {
     return (
         <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
+            transition={{ duration: 0.5 }}
             className="bg-text-primary md:py-24 py-8 px-section"
         >
             <div className="container mx-auto text-center">
-                <h2 className="text-white xl:text-5xl font-semibold md:text-3xl text-2xl mb-4">
-                    Tem uma ideia de projeto?
-                    <br /> Vamos conversar sobre ela!
+                <h2 className="text-white xl:text-5xl font-semibold md:text-3xl text-2xl">
+                    Você teve uma ideia de Projeto?
+                    <br /> Vamos discurtir sobre!
                 </h2>
                 <p className="text-[#a5acb5] text-lg md:my-8 my-6">
-                    Se você tem um projeto em mente ou deseja discutir uma nova ideia, estamos aqui para ajudar a transformar sua visão em realidade.
+                    Existem várias variações de passagens de Lorem Ipsum
+                    <br /> disponíveis, mas a maioria sofreu alteração.
                 </p>
                 <Link
                     href="#contact"
-                    className="group relative inline-flex items-center overflow-hidden md:w-auto w-full justify-center rounded bg-primary px-8 py-3 text-white outline-hidden transition-all hover:bg-secondary hover:scale-105"
+                    className="group relative inline-flex items-center overflow-hidden md:w-auto w-full justify-center rounded bg-primary px-8 py-3 text-white outline-hidden"
+                    aria-label="Ir para a seção de contato"
                 >
                     <span className="absolute -end-full transition-all group-hover:end-4">
                         <svg
@@ -46,7 +48,7 @@ const ProjectIdea = () => {
                 </Link>
             </div>
         </motion.div>
-    )
-}
+    );
+};
 
-export default ProjectIdea
+export default ProjectIdea;

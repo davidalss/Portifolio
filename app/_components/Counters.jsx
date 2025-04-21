@@ -1,6 +1,6 @@
-"use client"
+'use client';
 
-import CountUp from "react-countup"
+import CountUp from 'react-countup';
 
 const countersData = [
     {
@@ -16,9 +16,10 @@ const countersData = [
     {
         number: 5,
         title: "+",
-        subtitle: "Happy Client",
+        subtitle: "Happy Clients",
     },
-]
+];
+
 const Counters = () => {
     return (
         <div className="grid grid-cols-3 gap-1 xl:w-[648px] lg:w-[400px] max-w-full rounded-md overflow-hidden shadow-lg">
@@ -37,7 +38,7 @@ const Counters = () => {
                 </div>
             ))}
         </div>
-    )
-}
+    );
+};
 
-export default Counters
+export default Counters;
