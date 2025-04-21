@@ -120,11 +120,10 @@ const Portfolio = () => {
             className="container mx-auto text-center py-20 px-section"
         >
             <h2 className="xl:text-5xl font-semibold md:text-3xl text-2xl xl:leading-[56px] mb-6">
-                Portfolio
+                Meu Portfolio
             </h2>
             <p className="text-text-secondary text-lg md:mb-16 mb-6 max-w-[650px] mx-auto">
-                Adoro criar coisas e estou sempre trabalhando em algo
-                Novo! Você pode ver alguns dos meus projetos favoritos abaixo.
+                Adoro criar coisas e estou sempre trabalhando em algo Novo! Você pode ver alguns dos meus projetos favoritos abaixo.
             </p>
             <div className="xl:grid hidden grid-cols-3 gap-6">
                 {projects.map((project, index) => (

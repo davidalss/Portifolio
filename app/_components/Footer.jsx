@@ -19,7 +19,7 @@ const Footer = () => {
                             className="w-14 h-auto"
                         />
                         <p className="xl:text-4xl lg:text-3xl text-2xl text-white">
-                            Muito Obrigado!
+                            Obrigado pela Visita!
                         </p>
                     </a>
                     <nav>
@@ -43,21 +43,23 @@ const Footer = () => {
                             ))}
                         </ul>
                     </nav>
-                    <p className="text-white">
-                        Copyright <FaRegCopyright className="inline" />
-                        2025.
-                    </p>
                 </div>
 
-                <br></br>
-                
-                <p className="text-center text-white">
-                    Desenvolvido por{' '}
-                    <a href="mailto:davidalss041@gmail.com" className="underline">
-                        David Alisson
-                    </a>{' '}
-                    !
-                </p>
+                {/* Copyright section */}
+                <div className="flex items-center justify-between text-white">
+                    <p className="flex items-center gap-2 text-lg">
+                        <FaRegCopyright className="inline" /> 2025. Todos os direitos reservados.
+                    </p>
+                    <p className="text-lg text-center">
+                        Desenvolvido por{' '}
+                        <a
+                            href="mailto:davidalss041@gmail.com"
+                            className="underline"
+                        >
+                            David Alisson
+                        </a>
+                    </p>
+                </div>
             </div>
         </footer>
     );

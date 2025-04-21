@@ -10,14 +10,14 @@ const countersData = [
         subtitle: "Transição para a área de TI",
     },
     {
-        number: 5,
         title: "+",
+        number: 5,
         subtitle: "Projetos práticos desenvolvidos",
     },
     {
         number: 100,
         title: "%",
-        subtitle: "dedicação nos estudos e evolução contínua",
+        subtitle: "Dedicação nos estudos e evolução contínua",
     },
 ];
 

@@ -9,11 +9,11 @@ import { motion } from "framer-motion";
 export const socials = [
     {
         link: "https://github.com/davidalss",
-        icon: <i className="public\icons\github.png"></i>, // Substitua pelo ícone correto
+        icon: <i className="\public\icons\github.png"></i>, // Substitua pelo ícone correto
     },
     {
         link: "https://linkedin.com",
-        icon: <i className="public\socials\Social-3.svg"></i>, // Substitua pelo ícone correto
+        icon: <i className="\public\socials\Social-3.svg"></i>, // Substitua pelo ícone correto
     },
 ]
 
