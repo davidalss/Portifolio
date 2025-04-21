@@ -6,13 +6,13 @@ import Link from "next/link"
 import { GiHamburgerMenu } from "react-icons/gi"
 
 export const sections = [
-    "Home",
-    "About",
+    "Pagina Inicial",
+    "Sobre",
     "Process",
     "portfolio",
     "Blog",
-    "Services",
-    "Contact",
+    "Serviços",
+    "Contato",
 ]
 const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
