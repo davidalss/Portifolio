@@ -11,10 +11,10 @@ const Card = ({ icon, title, text, index }) => (
             index % 2 === 1
                 ? "md:hover:-translate-y-8 md:-translate-y-4"
                 : "md:hover:-translate-y-4"
-        }  group md:hover:shadow-[32px_32px_124px_0px_#2b384c1a] hover:shadow-lg rounded-xl bg-white xl:p-8 p-6  transition-all md:ml-0 ml-4 md:max-w-auto max-w-[350px]`}
+        }  group md:hover:shadow-[32px_32px_124px_0px_#2b384c1a] hover:shadow-lg rounded-xl bg-white xl:p-8 p-6 transition-all md:ml-0 ml-4 md:max-w-auto max-w-[350px]`}
     >
         {icon}
-        <h3 className="text-xl mt-8 mb-3">{title}</h3>
+        <h3 className="text-xl mt-8 mb-3 font-semibold text-text-primary">{title}</h3>
         <p className="text-text-secondary leading-6">{text}</p>
     </div>
 )
@@ -24,31 +24,32 @@ const boxes = [
         icon: (
             <MdOutlineEventNote className="text-primary size-[72px] p-5 rounded-md bg-biege/40 group-hover:bg-primary group-hover:text-white transition-all" />
         ),
-        title: "1. Research",
-        text: "Gather insights to understand your goals and audience and requirements.",
+        title: "1. Planejamento",
+        text: "Analisamos o seu negócio para entender seus objetivos e requisitos, criando um plano estratégico para o desenvolvimento do projeto.",
     },
     {
         icon: (
             <FaChartBar className="text-primary size-[72px] p-5 rounded-md bg-biege/40 group-hover:bg-primary group-hover:text-white transition-all" />
         ),
-        title: "2. Analyze",
-        text: "Collected data, identify challenges, and create a clear roadmap.",
+        title: "2. Análise de Dados",
+        text: "Coletamos e analisamos dados para identificar oportunidades e desafios, preparando uma estratégia clara para o desenvolvimento.",
     },
     {
         icon: (
             <FaPencilAlt className="text-primary size-[72px] p-5 rounded-md bg-biege/40 group-hover:bg-primary group-hover:text-white transition-all" />
         ),
-        title: "3. Design",
-        text: "Create user-focused, visually appealing, and functional designs.",
+        title: "3. Desenvolvimento e Design",
+        text: "Criamos soluções técnicas e designs que atendem às necessidades do usuário, combinando funcionalidade e estética.",
     },
     {
         icon: (
-            <MdOutlineEventNote className="text-primary size-[72px] p-5 rounded-md bg-biege/40 group-hover:bg-primary group-hover:text-white transition-all" />
+            <FaLaptop className="text-primary size-[72px] p-5 rounded-md bg-biege/40 group-hover:bg-primary group-hover:text-white transition-all" />
         ),
-        title: "4. Launch",
-        text: "Deliver and deploy with precision, ensuring a seamless experience.",
+        title: "4. Implementação",
+        text: "Realizamos a entrega e o lançamento do projeto, garantindo que todas as soluções funcionem perfeitamente e ofereçam uma experiência fluida.",
     },
 ]
+
 const WorkProcess = () => {
     return (
         <motion.div
@@ -62,18 +63,13 @@ const WorkProcess = () => {
                 {/* info-side */}
                 <div className="lg:max-w-[40%] lg:text-left text-center">
                     <h2 className="lg:text-5xl font-semibold md:text-3xl text-2xl leading-[56px] lg:mb-6 mb-4">
-                        Work Process
+                        Nosso Processo de Trabalho
                     </h2>
                     <p className="xl:text-2xl text-lg mb-4 text-text-secondary">
-                        Our streamlined process ensures efficiency and
-                        excellence at every stage.
+                        Nossa abordagem garante eficiência e excelência em cada etapa.
                     </p>
                     <p className="xl:text-2xl text-lg text-text-secondary">
-                        We begin with in-depth research to understand your
-                        goals, analyze data to craft a strategic plan, design
-                        user-centric solutions that blend functionality with
-                        aesthetics, and finally launch the project with
-                        precision, ensuring a flawless experience.
+                        Começamos com uma pesquisa profunda para entender seus objetivos, analisamos dados para criar um plano estratégico, projetamos soluções centradas no usuário e, finalmente, lançamos o projeto com precisão, garantindo uma experiência impecável.
                     </p>
                 </div>
                 {/* boxes-side */}

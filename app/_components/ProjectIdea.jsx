@@ -6,24 +6,22 @@ import { motion } from "framer-motion"
 const ProjectIdea = () => {
     return (
         <motion.div
-            initial={{ scale: 0.5, opacity: 0 }}
+            initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
             className="bg-text-primary md:py-24 py-8 px-section"
         >
-            <div className="container mx-auto text-center ">
-                <h2 className="text-white xl:text-5xl font-semibold md:text-3xl text-2xl">
-                    Você teve uma ideia de Projeto?
-                    <br /> Vamos discurtir sobre!
+            <div className="container mx-auto text-center">
+                <h2 className="text-white xl:text-5xl font-semibold md:text-3xl text-2xl mb-4">
+                    Tem uma ideia de projeto?
+                    <br /> Vamos conversar sobre ela!
                 </h2>
                 <p className="text-[#a5acb5] text-lg md:my-8 my-6">
-                    There are many variations of passages of Lorem Ipsum
-                    available,
-                    <br /> but the majority have suffered alteration.
+                    Se você tem um projeto em mente ou deseja discutir uma nova ideia, estamos aqui para ajudar a transformar sua visão em realidade.
                 </p>
                 <Link
                     href="#contact"
-                    className="group relative inline-flex items-center overflow-hidden md:w-auto w-full justify-center rounded bg-primary px-8 py-3 text-white outline-hidden"
+                    className="group relative inline-flex items-center overflow-hidden md:w-auto w-full justify-center rounded bg-primary px-8 py-3 text-white outline-hidden transition-all hover:bg-secondary hover:scale-105"
                 >
                     <span className="absolute -end-full transition-all group-hover:end-4">
                         <svg
@@ -43,7 +41,7 @@ const ProjectIdea = () => {
                     </span>
 
                     <span className="text-sm font-semibold transition-all group-hover:me-4">
-                    Vamos trabalhar juntos!
+                        Vamos trabalhar juntos!
                     </span>
                 </Link>
             </div>

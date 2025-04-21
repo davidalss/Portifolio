@@ -4,6 +4,7 @@ import Image from "next/image"
 import avatar from "@/public/avatar.png"
 import Counters from "./Counters"
 import { motion } from "framer-motion"
+import clsx from "clsx" // Usando a biblioteca clsx para manipulação condicional de classes
 
 const Hero = () => {
     return (
@@ -11,28 +12,28 @@ const Hero = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="animate-section container mx-auto flex lg:flex-row flex-col lg:gap-0 gap-4 items-center 2xl:justify-between md:pt-20 sm:pt-14 pt-10 pb-16 px-section overflow-hidden "
+            className="animate-section container mx-auto flex lg:flex-row flex-col lg:gap-0 gap-4 items-center 2xl:justify-between md:pt-20 sm:pt-14 pt-10 pb-16 px-section overflow-hidden"
         >
-            {/* info-box */}
+            {/* Info Box */}
             <div className="2xl:max-w-[780px] lg:max-w-full w-auto lg:text-left text-center lg:mt-0 mt-4">
                 <h1 className="xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-semibold xl:leading-[84px] text-text-primary xl:mb-6 mb-3">
                     Olá, Eu sou
                     <br />
-                    {/* underlaying-tape */}
+                    {/* Underlining Tape */}
                     <div className="whitespace-nowrap relative w-fit lg:mx-0 mx-auto">
                         <p className="relative z-10">David</p>
                         <div className="absolute inset-0 -left-1 h-full bg-linear-[0deg,#f2ddb0_0%,#f2ddb0_50%,transparent_50%,transparent] animate-stretch"></div>
                     </div>
                 </h1>
                 <div className="text-text-secondary xl:text-2xl text-base xl:mb-6 mb-4">
-                    Atualmente estudo {/* underlaying-tape */}
+                    Atualmente estudo {/* Underlining Tape */}
                     <div className="whitespace-nowrap relative w-fit lg:mx-0 mx-auto inline-block">
                         <p className="relative z-10">Análise e Desenvolvimento de Sistemas</p>
                         <div className="absolute inset-0 -left-1 h-full bg-linear-[0deg,#f2ddb0_0%,#f2ddb0_50%,transparent_50%,transparent] animate-stretch"></div>
-                    </div>{" "}
-                    estudando Full-Stack mas meu foco é me tornar um DEV Back-End {/* underlaying-tape */}
+                    </div>
+                    estudando Full-Stack, mas meu foco é me tornar um DEV Back-End {/* Underlining Tape */}
                     <div className="whitespace-nowrap relative w-fit lg:mx-0 mx-auto inline-block">
-                        <p className="relative z-10">Next.js</p>{" "}
+                        <p className="relative z-10">Next.js</p>
                         <div className="absolute inset-0 -left-1 h-full bg-linear-[0deg,#f2ddb0_0%,#f2ddb0_50%,transparent_50%,transparent] animate-stretch"></div>
                     </div>
                     Em constante aprendizado sobre ferramentas e práticas modernas de desenvolvimento, buscando aplicar boas práticas de código e me manter atualizado com as tendências e avanços da área para entregar soluções de qualidade.
@@ -45,17 +46,18 @@ const Hero = () => {
                 </a>
                 <Counters />
             </div>
-            {/* avatar-side */}
+
+            {/* Avatar Section */}
             <div className="relative">
                 <Image
                     src={avatar.src}
-                    alt="avatar"
+                    alt="Imagem do Avatar de David Alisson"
                     width={520}
                     height={520}
-                    className="2xl:size-[520px] lg:size-[440px] md:size-[420px] sm:size-[340px] size-[240px] absolute inset-0 z-10 left-2.5"
+                    className="2xl:w-[520px] lg:w-[440px] md:w-[420px] sm:w-[340px] w-[240px] absolute inset-0 z-10 left-2.5"
                 />
-                <div className="2xl:size-[540px] lg:size-[460px] md:size-[440px] sm:size-[360px] size-[260px] rounded-full bg-linear-[45deg,var(--color-primary)_0%,var(--color-primary)_60%,transparent_60%,transparent] flex items-center justify-center animate-rotate">
-                    <div className="2xl:size-[520px] lg:size-[440px] md:size-[420px] sm:size-[340px] size-[240px] rounded-full bg-biege"></div>
+                <div className="2xl:w-[540px] lg:w-[460px] md:w-[440px] sm:w-[360px] w-[260px] rounded-full bg-linear-[45deg,var(--color-primary)_0%,var(--color-primary)_60%,transparent_60%,transparent] flex items-center justify-center animate-rotate">
+                    <div className="2xl:w-[520px] lg:w-[440px] md:w-[420px] sm:w-[340px] w-[240px] rounded-full bg-biege"></div>
                 </div>
             </div>
         </motion.div>
