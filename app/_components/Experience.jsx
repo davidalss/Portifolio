@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 
 const socialLinks = [
     { icon: <FaGithub />, link: "https://github.com/davidalss" },
-    { icon: <FaInstagram />, link: "https://www.instagram.com/david.alss/" },
     { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/davidalss/" },
     { icon: <FaGitlab />, link: "https://gitlab.com/davidalss" },
 ];
@@ -55,7 +54,7 @@ const Experience = () => {
                 {/* Information Section */}
                 <div className="max-w-[536px] lg:text-left text-center">
                     <h3 className="xl:text-[38px] font-semibold md:text-3xl text-2xl text-text-primary md:leading-[50px] md:mb-8 mb-4">
-                        Estudante de ADS, atualmente explorando o desenvolvimento Full Stack.
+                        Atualmente sou Estudante de ADS, explorando o desenvolvimento Full Stack.
                     </h3>
 
                     <p className="text-lg text-text-secondary mb-4">

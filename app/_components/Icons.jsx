@@ -1,36 +1,35 @@
 "use client"
 import React, { useEffect, useState } from "react"
-import github from "@/public/icons/github.png"
-import js from "@/public/icons/javascript.png"
-import jest from "@/public/icons/jest.png"
-import material from "@/public/icons/material-ui.png"
-import next from "@/public/icons/nextjs.png"
-import RQ from "@/public/icons/react-query.png"
-import redux from "@/public/icons/redux-logo.png"
-import sanity from "@/public/icons/sanity.png"
-import sass from "@/public/icons/sass.png"
-import tailwind from "@/public/icons/tailwindcss.png"
-import ts from "@/public/icons/typescript.png"
 import Image from "next/image"
 import Marquee from "react-fast-marquee"
 import { motion } from "framer-motion"
 
-const icons = [
-    github,
-    js,
-    jest,
-    material,
-    next,
-    RQ,
-    redux,
-    sanity,
-    sass,
-    tailwind,
-    ts,
-]
+// Front-end
+import html from "@/public/icons/html.png"
+import css from "@/public/icons/css.png"
+import js from "@/public/icons/javascript.png"
+import ts from "@/public/icons/typescript.png"
+import react from "@/public/icons/react.png"
+import next from "@/public/icons/nextjs.png"
+import tailwind from "@/public/icons/tailwindcss.png"
+
+// Back-end
+import node from "@/public/icons/nodejs.png"
+import mongo from "@/public/icons/mongodb.png"
+import postgres from "@/public/icons/postgresql.png"
+import postgres from "@/public/icons/c#.png"
+// Versionamento e ferramentas
+import git from "@/public/icons/git.png"
+import github from "@/public/icons/github.png"
+
+const frontIcons = [html, css, js, ts, react, next, tailwind]
+const backIcons = [node, express, mongo, postgres]
+const toolsIcons = [git, github]
+
 const Icons = () => {
     const [speed, setSpeed] = useState(50)
     const [gap, setGap] = useState(32)
+
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 767) {
@@ -49,28 +48,35 @@ const Icons = () => {
         return () => window.removeEventListener("resize", handleResize)
     }, [])
 
+    const renderIcons = (title: string, icons: any[]) => (
+        <div className="mb-8">
+            <h3 className="text-center text-xl font-semibold text-text-primary mb-4">{title}</h3>
+            <Marquee speed={speed} gradient={false}>
+                {icons.map((icon) => (
+                    <div key={icon.src} style={{ marginRight: `${gap}px` }}>
+                        <Image
+                            src={icon}
+                            alt="icon"
+                            width={60}
+                            height={60}
+                            className="md:h-[80px] h-[60px] w-auto"
+                        />
+                    </div>
+                ))}
+            </Marquee>
+        </div>
+    )
+
     return (
         <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="container mx-auto px-section flex gap-3.5 justify-center relative z-10 animate-section"
+            className="container mx-auto px-section py-10"
         >
-            <div className="w-full">
-                <Marquee speed={speed} gradient={false} pauseOnHover={false}>
-                    {icons.map((icon) => (
-                        <div key={icon.src} style={{ marginRight: `${gap}px` }}>
-                            <Image
-                                src={icon.src}
-                                alt="icon"
-                                width={70}
-                                height={70}
-                                className="md:h-[100px] h-[70px] w-auto"
-                            />
-                        </div>
-                    ))}
-                </Marquee>
-            </div>
+            {renderIcons("Front-End", frontIcons)}
+            {renderIcons("Back-End", backIcons)}
+            {renderIcons("Ferramentas", toolsIcons)}
         </motion.div>
     )
 }

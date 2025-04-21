@@ -4,19 +4,19 @@ import CountUp from 'react-countup';
 
 const countersData = [
     {
-        number: 2,
-        title: "Years",
-        subtitle: "Experience",
-    },
-    {
-        number: 10,
-        title: "+",
-        subtitle: "Projects Completed",
+        number: 1,
+        title: "ano",
+        subtitle: "de transição para a área de TI",
     },
     {
         number: 5,
         title: "+",
-        subtitle: "Happy Clients",
+        subtitle: "projetos práticos desenvolvidos",
+    },
+    {
+        number: 100,
+        title: "%",
+        subtitle: "dedicação nos estudos e evolução contínua",
     },
 ];
 

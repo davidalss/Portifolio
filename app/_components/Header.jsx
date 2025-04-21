@@ -74,7 +74,7 @@ const Header = () => {
                                     height={56}
                                     className="w-10 h-auto"
                                 />
-                                <p className="text-xl">Portfolio</p>
+                                <p className="text-xl">Bem Vindo ao meu Portfolio</p>
                             </div>
                             <button
                                 className="text-3xl font-bold cursor-pointer"

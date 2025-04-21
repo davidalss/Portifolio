@@ -8,12 +8,12 @@ import { motion } from "framer-motion"
 
 export const socials = [
     {
-        link: "https://github.com",
-        icon: <i className="fab fa-github"></i>, // Substitua pelo ícone correto
+        link: "https://github.com/davidalss",
+        icon: <i className="public\icons\github.png"></i>, // Substitua pelo ícone correto
     },
     {
         link: "https://linkedin.com",
-        icon: <i className="fab fa-linkedin"></i>, // Substitua pelo ícone correto
+        icon: <i className="public\socials\Social-3.svg"></i>, // Substitua pelo ícone correto
     },
 ]
 
@@ -93,12 +93,11 @@ const Contact = () => {
             <div className="bg-white container mx-auto  rounded-2xl relative top-20 xl:p-[88px] lg:p-14 md:p-10 p-2 flex lg:flex-row flex-col items-center justify-between shadow-[0px_59px_124px_0px_#0000001f]">
                 {/* left-side */}
                 <div className="lg:max-w-[40%]">
-                    <h3 className="lg:text-4xl font-semibold md:text-3xl text-2xl mb-4 text-text-primary lg:text-left text-center">
+                <h3 className="lg:text-4xl font-semibold md:text-3xl text-2xl mb-4 text-text-primary">
                         Vamos discutir seu projeto
                     </h3>
-                    <p className="text-lg text-text-secondary xl:mb-9 lg:mb-6 mb-4 lg:text-left text-center w-fit px-1">
-                        There are many variations of passages of Lorem Ipsum
-                        available. but the majority have suffered alteration.
+                    <p className="text-lg text-text-secondary mb-4 lg:mb-9">
+                        Aqui estão algumas maneiras de entrar em contato comigo.
                     </p>
                     {/* contacts */}
                     <div className="flex flex-col gap-3 xl:mb-9 lg:mb-6 mb-4">
@@ -130,8 +129,7 @@ const Contact = () => {
                 {/* form */}
                 <div className="lg:max-w-[50%]">
                     <p className="text-text-secondary text-lg lg:text-left text-center lg:mb-12 mb-8">
-                        There are many variations of passages of Lorem Ipsum
-                        available. but the majority have suffered alteration.
+                    Insira aqui suas informações e entrarei em contato o mais breve possível.
                     </p>
                     <form
                         action="#"
@@ -141,53 +139,43 @@ const Contact = () => {
                         <input
                             type="text"
                             name="name"
-                            id="name"
-                            placeholder="Name"
-                            spellCheck="false"
+                            placeholder="Nome"
                             required
-                            className="w-full p-3 focus:outline-none transition-all outline-none border-b-2 border-[#e6e8eb] focus:border-[#a35c6a]"
+                            className="w-full p-3 border-b-2 border-[#e6e8eb] focus:outline-none focus:border-[#a35c6a]"
                         />
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <input
                                 type="email"
                                 name="email"
-                                id="email"
-                                placeholder="Email Address"
-                                spellCheck="false"
+                                placeholder="Email"
                                 required
-                                className="w-full p-3 focus:outline-none transition-all outline-none border-b-2 border-[#e6e8eb] focus:border-[#a35c6a]"
+                                className="w-full p-3 border-b-2 border-[#e6e8eb] focus:outline-none focus:border-[#a35c6a]"
                             />
                             <input
                                 type="tel"
                                 name="phone"
-                                id="phone"
-                                placeholder="Phone Number"
-                                spellCheck="false"
-                                className="w-full p-3 focus:outline-none transition-all outline-none border-b-2 border-[#e6e8eb] focus:border-[#a35c6a]"
+                                placeholder="Celular"
+                                className="w-full p-3 border-b-2 border-[#e6e8eb] focus:outline-none focus:border-[#a35c6a]"
                             />
                         </div>
                         <input
                             type="text"
                             name="subject"
-                            id="subject"
-                            placeholder="Subject"
-                            spellCheck="false"
+                            placeholder="Assunto"
                             required
-                            className="w-full p-3 focus:outline-none transition-all outline-none border-b-2 border-[#e6e8eb] focus:border-[#a35c6a]"
+                            className="w-full p-3 border-b-2 border-[#e6e8eb] focus:outline-none focus:border-[#a35c6a]"
                         />
                         <textarea
                             name="message"
-                            id="message"
-                            placeholder="Message"
-                            spellCheck="false"
+                            placeholder="Mensagem"
                             required
                             rows={3}
-                            className="w-full p-3 focus:outline-none transition-all outline-none border-b-2 border-[#e6e8eb] focus:border-[#a35c6a]"
+                            className="w-full p-3 border-b-2 border-[#e6e8eb] focus:outline-none focus:border-[#a35c6a]"
                         />
                         <div className="mt-4">
                             <button
                                 type="submit"
-                                className="group relative md:w-auto w-full inline-flex justify-center items-center overflow-hidden rounded bg-primary px-6 py-3 tracking-widest text-white outline-hidden"
+                                className="group relative md:w-auto w-full inline-flex justify-center items-center overflow-hidden rounded bg-primary px-6 py-3 text-white"
                             >
                                 <span className="absolute -end-full transition-all group-hover:end-4 mb-1">
                                     <TbSend2 />

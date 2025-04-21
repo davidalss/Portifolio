@@ -48,6 +48,9 @@ const Footer = () => {
                         2025.
                     </p>
                 </div>
+
+                <br></br>
+                
                 <p className="text-center text-white">
                     Desenvolvido por{' '}
                     <a href="mailto:davidalss041@gmail.com" className="underline">

@@ -16,22 +16,22 @@ const Hero = () => {
             {/* Info Box */}
             <div className="2xl:max-w-[780px] lg:max-w-full w-auto lg:text-left text-center lg:mt-0 mt-4">
                 <h1 className="xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-semibold xl:leading-[84px] text-text-primary xl:mb-6 mb-3">
-                    Olá, Eu sou
+                    Olaa!, Eu sou
                     <br />
                     <div className="whitespace-nowrap relative w-fit lg:mx-0 mx-auto">
-                        <p className="relative z-10">David</p>
+                        <p className="relative z-10">David Alisson</p>
                         <div className="absolute inset-0 -left-1 h-full bg-linear-[0deg,#f2ddb0_0%,#f2ddb0_50%,transparent_50%,transparent] animate-stretch"></div>
                     </div>
                 </h1>
                 <div className="text-text-secondary xl:text-2xl text-base xl:mb-6 mb-4">
                     Atualmente estudo
                     <div className="whitespace-nowrap relative w-fit lg:mx-0 mx-auto inline-block">
-                        <p className="relative z-10">Análise e Desenvolvimento de Sistemas</p>
+                        <p className="relative z-10">Analise e Desenvolvimento de Sistemas</p>
                         <div className="absolute inset-0 -left-1 h-full bg-linear-[0deg,#f2ddb0_0%,#f2ddb0_50%,transparent_50%,transparent] animate-stretch"></div>
                     </div>
-                    estudando Full-Stack mas meu foco é me tornar um DEV Back-End
+                    estudando Full-Stack mas meu foco é me tornar um DEV 
                     <div className="whitespace-nowrap relative w-fit lg:mx-0 mx-auto inline-block">
-                        <p className="relative z-10">Next.js</p>
+                        <p className="relative z-10">Back-End</p>
                         <div className="absolute inset-0 -left-1 h-full bg-linear-[0deg,#f2ddb0_0%,#f2ddb0_50%,transparent_50%,transparent] animate-stretch"></div>
                     </div>
                     Em constante aprendizado sobre ferramentas e práticas modernas de desenvolvimento, buscando aplicar boas práticas de código e me manter atualizado com as tendências e avanços da área para entregar soluções de qualidade.
@@ -40,7 +40,7 @@ const Hero = () => {
                     className="inline-block rounded-sm bg-primary lg:px-6 px-12 lg:py-3 py-4 sm:w-fit w-full xl:text-xl lg:text-lg tracking-wider font-medium text-white transition hover:scale-110 hover:shadow-xl outline-hidden lg:mb-16 mb-8"
                     href="#contact"
                 >
-                    Diga Olá!
+                    Entrar em contato!
                 </a>
                 <Counters />
             </div>
