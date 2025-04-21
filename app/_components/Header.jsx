@@ -10,7 +10,6 @@ export const sections = [
     'Sobre',
     'Process',
     'portfolio',
-    'Blog',
     'Serviços',
     'Contato',
 ];

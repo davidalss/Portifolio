@@ -6,13 +6,13 @@ import CountUp from 'react-countup';
 const countersData = [
     {
         number: 1,
-        title: "ano",
-        subtitle: "de transição para a área de TI",
+        title: " Ano",
+        subtitle: "Transição para a área de TI",
     },
     {
         number: 5,
         title: "+",
-        subtitle: "projetos práticos desenvolvidos",
+        subtitle: "Projetos práticos desenvolvidos",
     },
     {
         number: 100,

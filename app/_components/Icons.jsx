@@ -23,9 +23,7 @@ import csharp from "/public/icons/csharp.png";
 import git from "/public/icons/git.png";
 import github from "/public/icons/github.png";
 
-const frontIcons = [html, css, js, ts, next, tailwind];
-const backIcons = [node, mongo, postgres, csharp];
-const toolsIcons = [git, github];
+const frontIcons = [html, css, js, ts, next, tailwind, node, mongo, postgres, csharp, git, github];
 
 const Icons = () => {
     const [speed, setSpeed] = useState(50);
@@ -76,9 +74,7 @@ const Icons = () => {
             className="container mx-auto px-section py-10"
         >
             {renderIcons("Front-End", frontIcons)}
-            {renderIcons("Back-End", backIcons)}
-            {renderIcons("Ferramentas", toolsIcons)}
-        </motion.div>
+                </motion.div>
     );
 };
 
