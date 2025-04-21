@@ -65,21 +65,25 @@ const Experience = () => {
                 </div>
                 {/* info-side */}
                 <div className="max-w-[536px] lg:text-left text-center">
-                    <h3 className="xl:text-[38px] font-semibold md:text-3xl text-2xl text-text-primary md:leading-[50px] md:mb-8 mb-4">
-                        I'm Professional FrontEnd Developer
-                    </h3>
-                    <p className="text-lg text-text-secondary mb-4">
-                        Demonstrated ability to self-manage during independent
-                        projects and thrive in collaborative team environments.
-                        Committed to delivering exceptional code quality and
-                        staying updated with industry trends and advancements.
-                    </p>
-                    <p className="text-lg text-text-secondary mb-4">
-                        Experienced Frontend Developer with nearly 2 years of
-                        experience in Next.js development. Proficient in
-                        utilizing cutting-edge development tools and procedures
-                        to deliver high-quality results
-                    </p>
+                <h3 className="xl:text-[38px] font-semibold md:text-3xl text-2xl text-text-primary md:leading-[50px] md:mb-8 mb-4">
+  Estudante de Análise e Desenvolvimento de Sistemas, com foco em me tornar um Desenvolvedor Back-End, atualmente explorando o desenvolvimento Full Stack.
+</h3>
+
+<p className="text-lg text-text-secondary mb-4">
+  Estou direcionando meus estudos para:
+  <br />
+  • <strong>C# e Java:</strong> aprofundando sintaxe, princípios de orientação a objetos e boas práticas de desenvolvimento;
+  <br />
+  • <strong>APIs RESTful:</strong> criação de serviços escaláveis, seguros e bem documentados;
+  <br />
+  • <strong>Bancos de Dados SQL:</strong> modelagem relacional, otimização de queries e integridade dos dados;
+  <br />
+  • <strong>Boas Práticas e Arquitetura:</strong> foco em clean code, segurança, escalabilidade e desempenho.
+</p>
+
+<p className="text-lg text-text-secondary mb-4">
+  Estou em constante aprendizado sobre ferramentas e tecnologias modernas de desenvolvimento, com o objetivo de aplicar código limpo, eficiente e bem testado. Busco acompanhar as tendências e inovações da área para entregar soluções cada vez mais profissionais e alinhadas ao mercado.
+</p>
                     <div className="flex md:flex-row flex-col justify-center lg:justify-start gap-4 ">
                         <Link
                             className="flex items-center justify-center rounded md:w-auto w-full bg-primary px-6 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl outline-hidden"
