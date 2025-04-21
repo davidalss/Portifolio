@@ -80,7 +80,7 @@ const Contact = () => {
                 {/* left-side */}
                 <div className="lg:max-w-[40%]">
                     <h3 className="lg:text-4xl font-semibold md:text-3xl text-2xl mb-4 text-text-primary lg:text-left text-center">
-                        Let's discuss your Project
+                        Vamos discutir seu projeto
                     </h3>
                     <p className="text-lg text-text-secondary xl:mb-9 lg:mb-6 mb-4 lg:text-left text-center w-fit px-1">
                         There are many variations of passages of Lorem Ipsum
@@ -179,7 +179,7 @@ const Contact = () => {
                                     <TbSend2 />
                                 </span>
                                 <span className="text-sm font-medium transition-all group-hover:me-4">
-                                    Submit
+                                        Enviar
                                 </span>
                             </button>
                         </div>
