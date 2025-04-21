@@ -2,9 +2,13 @@
 import Image from "next/image"
 import React from "react"
 import logo from "@/public/footerLogo.svg"
-import { sections } from "./Header"
 import { FaRegCopyright } from "react-icons/fa"
-import clsx from "clsx" // Usado para classes condicionais (instalar clsx se não tiver)
+
+// Substituindo clsx por uma função simples (evita erro de dependência)
+const cx = (...classes) => classes.filter(Boolean).join(" ")
+
+// Fallback para sections caso não esteja disponível no Header
+const sections = ["Home", "Sobre", "Projetos", "Blog", "Skills", "Contato", "Início"]
 
 const Footer = () => {
     return (
@@ -14,7 +18,7 @@ const Footer = () => {
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3">
                         <Image
-                            src={logo.src}
+                            src={logo}
                             alt="Logo"
                             width={56}
                             height={56}
@@ -29,16 +33,16 @@ const Footer = () => {
                         <ul className="grid lg:grid-cols-7 grid-cols-2 lg:gap-0 gap-8 items-center text-xl leading-6 text-white">
                             {sections.map((section, index) => (
                                 <li
-                                    key={index} // Usando o índice aqui para garantir que a chave seja única
-                                    className={clsx(
+                                    key={index}
+                                    className={cx(
                                         index === 6 && "lg:col-span-1 col-span-2",
                                         "mx-auto hover:text-primary transition"
                                     )}
                                 >
                                     <a
-                                        href={"#" + section.toLocaleLowerCase()}
+                                        href={"#" + section.toLowerCase()}
                                         className="p-3"
-                                        aria-label={`Ir para seção ${section}`} // Melhorando a acessibilidade
+                                        aria-label={`Ir para seção ${section}`}
                                     >
                                         {section}
                                     </a>
@@ -54,7 +58,11 @@ const Footer = () => {
                 {/* Desenvolvedor */}
                 <p className="text-center text-white">
                     Desenvolvido por{" "}
-                    <a href="mailto:davidalss041@gmail.com" className="underline" aria-label="Entrar em contato com David Alisson">
+                    <a
+                        href="mailto:davidalss041@gmail.com"
+                        className="underline"
+                        aria-label="Entrar em contato com David Alisson"
+                    >
                         David Alisson
                     </a>{" "}
                     !

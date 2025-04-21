@@ -4,7 +4,6 @@ import Image from "next/image"
 import avatar from "@/public/avatar.png"
 import Counters from "./Counters"
 import { motion } from "framer-motion"
-import clsx from "clsx" // Usando a biblioteca clsx para manipulação condicional de classes
 
 const Hero = () => {
     return (

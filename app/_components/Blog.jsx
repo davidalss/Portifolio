@@ -39,15 +39,20 @@ const Card = ({ img, date, title, url, description }) => (
 const Blog = () => {
     const [blogs, setBlogs] = useState([])
     const builder = createImageUrlBuilder(client)
+
+    const urlFor = (source) => builder.image(source)
+
     const fetch = async () => {
         const blogs = await client.fetch(POSTS_QUERY, {}, options)
-        setBlogs(blogs)
+        const validBlogs = blogs.filter(
+            blog => blog?.poster?.asset?._ref && blog?.blogName && blog?.link
+        )
+        setBlogs(validBlogs)
     }
+
     useEffect(() => {
         fetch()
     }, [])
-
-    const urlFor = (source) => builder.image(source)
 
     const settings = {
         dots: true,
@@ -95,19 +100,29 @@ const Blog = () => {
             <p className="text-text-secondary text-lg mb-16 max-w-[650px] mx-auto">
                 Neste blog, compartilho insights sobre a transição para o mercado de tecnologia, minhas experiências com ferramentas como Power BI, SAP, SQL, além de dicas de boas práticas de desenvolvimento e automação. A ideia é dividir meus conhecimentos para ajudar outros profissionais da área e aqueles que estão começando. Fique à vontade para explorar e aprender mais sobre essas tecnologias que estão moldando o futuro.
             </p>
-            <Slider {...settings}>
-                {blogs.map((blog, index) => (
-                    <div key={index} className="px-3">
-                        <Card
-                            date={formatDate(blog.date)}
-                            img={urlFor(blog.poster.asset._ref).url()}
-                            title={blog.blogName}
-                            url={blog.link}
-                            description={blog.description}  // Adicionando descrição
-                        />
-                    </div>
-                ))}
-            </Slider>
+
+            {Array.isArray(blogs) && blogs.length > 0 ? (
+                <Slider {...settings}>
+                    {blogs.map((blog, index) => (
+                        <div key={index} className="px-3">
+                            <Card
+                                date={formatDate(blog.date)}
+                                img={
+                                    blog?.poster?.asset?._ref
+                                        ? urlFor(blog.poster.asset._ref).url()
+                                        : "/placeholder.jpg"
+                                }
+                                title={blog.blogName}
+                                url={blog.link}
+                                description={blog.description}
+                            />
+                        </div>
+                    ))}
+                </Slider>
+            ) : (
+                <p className="text-center text-gray-400">Nenhum blog encontrado.</p>
+            )}
+
             <a 
                 href="#contact" 
                 className="mt-8 inline-block rounded bg-primary px-6 py-3 text-white font-medium transition hover:scale-110 hover:shadow-xl"

@@ -4,8 +4,11 @@ import logo from "@/public/headerLogo.svg"
 import Image from "next/image"
 import Link from "next/link"
 import { GiHamburgerMenu } from "react-icons/gi"
-import clsx from "clsx" // Usando a biblioteca para classes condicionais
 
+// Substituindo clsx por uma função simples para classes condicionais
+const cx = (...classes) => classes.filter(Boolean).join(" ")
+
+// Seções de navegação (sem dependência externa)
 export const sections = [
     "Pagina Inicial",
     "Sobre",
@@ -37,11 +40,11 @@ const Header = () => {
         }
     }, [])
 
-    const onToggleMenu = () => setToggleMenu(prev => !prev)
+    const onToggleMenu = () => setToggleMenu((prev) => !prev)
 
     return (
         <header
-            className={clsx(
+            className={cx(
                 "px-section bg-white md:shadow sticky top-0 z-50 transition-all",
                 isScrollingUp ? "translate-y-0" : "-translate-y-full"
             )}
@@ -50,17 +53,15 @@ const Header = () => {
                 {/* Logo */}
                 <a href="/" className="md:flex hidden items-center gap-3">
                     <Image
-                        src={logo.src}
+                        src={logo}
                         alt="Logo Portfolio"
                         width={56}
                         height={56}
                         className="w-14 h-auto"
                     />
-                    <p className="xl:text-4xl lg:text-3xl text-2xl">
-                        Portfolio
-                    </p>
+                    <p className="xl:text-4xl lg:text-3xl text-2xl">Portfolio</p>
                 </a>
-                
+
                 {/* Hamburger Menu */}
                 <GiHamburgerMenu
                     className="cursor-pointer md:hidden block"
@@ -70,7 +71,7 @@ const Header = () => {
 
                 {/* Navigation Menu */}
                 <nav
-                    className={clsx(
+                    className={cx(
                         "left-0 md:inset-0 md:shadow-none shadow-double transition-transform md:h-auto h-screen md:p-0 p-4 py-2.5 z-10 block md:relative absolute top-0 bg-biege md:bg-white",
                         toggleMenu ? "" : "md:translate-x-0 -translate-x-full"
                     )}
@@ -80,7 +81,7 @@ const Header = () => {
                         <li className="md:hidden flex items-center justify-between w-full">
                             <div className="flex items-center gap-3">
                                 <Image
-                                    src={logo.src}
+                                    src={logo}
                                     alt="Logo Portfolio"
                                     width={56}
                                     height={56}
