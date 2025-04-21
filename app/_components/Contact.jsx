@@ -1,10 +1,10 @@
-"use client"
-import React from "react"
-import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi"
-import { IoCallOutline } from "react-icons/io5"
-import { TbSend2 } from "react-icons/tb"
-import { client } from "@/sanity/client"
-import { motion } from "framer-motion"
+"use client";
+import React from "react";
+import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
+import { IoCallOutline } from "react-icons/io5";
+import { TbSend2 } from "react-icons/tb";
+import { client } from "@/sanity/client";
+import { motion } from "framer-motion";
 
 export const socials = [
     {

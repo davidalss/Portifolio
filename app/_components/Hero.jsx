@@ -1,9 +1,10 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import avatar from '@/public/avatar.png';
+import avatar from '/public/avatar.png';
 import Counters from './Counters';
 import { motion } from 'framer-motion';
+import { FiDownload } from "react-icons/fi";
 
 const Hero = () => {
     return (

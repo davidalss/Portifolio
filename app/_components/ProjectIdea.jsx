@@ -17,8 +17,8 @@ const ProjectIdea = () => {
                     <br /> Vamos discurtir sobre!
                 </h2>
                 <p className="text-[#a5acb5] text-lg md:my-8 my-6">
-                    Existem várias variações de passagens de Lorem Ipsum
-                    <br /> disponíveis, mas a maioria sofreu alteração.
+                    Entre em contato comigo para discutir sua ideia de projeto. 
+                    <br /> Estou sempre aberto a novas oportunidades e colaborações.
                 </p>
                 <Link
                     href="#contact"
@@ -44,7 +44,7 @@ const ProjectIdea = () => {
 
                     <span className="text-sm font-semibold transition-all group-hover:me-4">
                         Vamos trabalhar juntos!
-                    </span>
+                        </span>
                 </Link>
             </div>
         </motion.div>

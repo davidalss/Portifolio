@@ -1,12 +1,12 @@
-'use client';
-
-import Image from "next/image";
+"use client";
 import React from "react";
-import avatar from "@/public/avatar2.png";
-import { FaFacebookF, FaGithub, FaInstagram, FaLinkedin, FaGitlab } from "react-icons/fa";
+import Image from "next/image";
+import { FaGithub, FaLinkedin, FaGitlab } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import Link from "next/link";
 import { motion } from "framer-motion";
+
+import avatar from "/public/avatar2.png";
 
 const socialLinks = [
     { icon: <FaGithub />, link: "https://github.com/davidalss" },

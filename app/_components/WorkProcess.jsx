@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+import React, { useEffect } from "react"
 import { MdOutlineEventNote } from "react-icons/md"
 import { FaChartBar, FaPencilAlt, FaLaptop } from "react-icons/fa"
 import Marquee from "react-fast-marquee"

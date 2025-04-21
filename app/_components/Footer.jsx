@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-import logo from '@/public/footerLogo.svg';
+import logo from '/public/footerLogo.svg';
 import { sections } from './Header';
 import { FaRegCopyright } from 'react-icons/fa';
 

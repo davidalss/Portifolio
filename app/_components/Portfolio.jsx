@@ -9,7 +9,12 @@ import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 
 const Card = ({ img, category, title, text, url }) => (
-    <div className="rounded-lg overflow-hidden text-left hover:shadow-card border border-section-secondary transition">
+    <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="rounded-lg overflow-hidden text-left hover:shadow-card border border-section-secondary transition"
+    >
         <Image
             src={img}
             alt={title}
@@ -20,7 +25,7 @@ const Card = ({ img, category, title, text, url }) => (
         <div className="p-8 xl:h-auto min-h-[258px]">
             <p className="text-xs text-text-secondary">{category}</p>
             <p className="text-lg mb-3 text-text-primary">{title}</p>
-            <p className=" mb-5 text-text-secondary">{text}</p>
+            <p className="mb-5 text-text-secondary">{text}</p>
             <a
                 className="group relative inline-flex items-center md:justify-start justify-center overflow-hidden rounded md:w-fit w-full border border-current px-8 py-3 text-primary focus:outline-hidden"
                 href={url}
@@ -43,44 +48,46 @@ const Card = ({ img, category, title, text, url }) => (
                 </span>
 
                 <span className="text-sm font-semibold transition-all group-hover:me-4">
-                        Estudo de caso
+                    Estudo de caso
                 </span>
             </a>
         </div>
-    </div>
-);
-
-const options = { next: { revalidate: 30 } };
+    </motion.div>
+)
 
 const Portfolio = () => {
-    const [projects, setProjects] = useState([]);
-    const [showAll, setShowAll] = useState(false);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const builder = createImageUrlBuilder(client);
+    const [projects, setProjects] = useState([])
+    const [showAll, setShowAll] = useState(false)
+    const builder = createImageUrlBuilder(client)
 
     const fetch = async (all = false) => {
-        setLoading(true);
-        try {
-            const POSTS_QUERY = `*[_type=="project"]{projectname, category, link, poster, description} | order(_createdAt desc) ${all ? "" : "[0...6]"}`;
-            const projects = await client.fetch(POSTS_QUERY, {}, options);
-            setProjects(projects);
-        } catch (err) {
-            setError(err);
-        } finally {
-            setLoading(false);
-        }
-    };
+        const POSTS_QUERY = `*[_type=="project"]{projectname,category,link,poster,description} | order(_createdAt desc) ${
+            all ? "" : "[0...6]"
+        }`
+        const fetchedProjects = await client.fetch(POSTS_QUERY, {})
+        setProjects(fetchedProjects.length ? fetchedProjects : [exampleProject])
+    }
 
     useEffect(() => {
-        fetch(showAll);
-    }, [showAll]);
+        fetch(showAll)
+    }, [showAll])
 
-    const urlFor = (source) => builder.image(source);
+    const urlFor = (source) => builder.image(source)
+    const toggleShowAll = () => setShowAll(true)
 
-    const toggleShowAll = () => setShowAll(true);
+    const exampleProject = {
+        projectname: "Projeto de Portfólio",
+        category: "Design",
+        description: "Um site de portfólio simples desenvolvido com Next.js.",
+        url: "#",
+        poster: {
+            asset: {
+                _ref: "image-id"
+            }
+        }
+    }
 
-    const settings = {
+    var settings = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -102,7 +109,7 @@ const Portfolio = () => {
                 },
             },
         ],
-    };
+    }
 
     return (
         <motion.div
@@ -116,11 +123,11 @@ const Portfolio = () => {
                 Portfolio
             </h2>
             <p className="text-text-secondary text-lg md:mb-16 mb-6 max-w-[650px] mx-auto">
-                    Adoro criar coisas e estou sempre trabalhando em algo
-                    Novo! Você pode ver alguns dos meus projetos favoritos abaixo.
+                Adoro criar coisas e estou sempre trabalhando em algo
+                Novo! Você pode ver alguns dos meus projetos favoritos abaixo.
             </p>
             <div className="xl:grid hidden grid-cols-3 gap-6">
-                {loading ? <p>Carregando...</p> : error ? <p>Erro ao carregar os projetos</p> : projects.map((project, index) => (
+                {projects.map((project, index) => (
                     <div key={index}>
                         <Card
                             img={urlFor(project.poster.asset._ref).url()}
@@ -150,13 +157,12 @@ const Portfolio = () => {
             <button
                 onClick={toggleShowAll}
                 disabled={showAll}
-                aria-label="Mostrar mais projetos"
                 className="mt-12 md:inline-block rounded bg-primary px-8 py-3 tracking-wider font-medium text-white transition enabled:hover:scale-110 disabled:bg-primary/60 hover:shadow-xl outline-hidden enabled:cursor-pointer hidden"
             >
-                Mais Projetos
+                {showAll ? "Todos os Projetos Carregados" : "Mais Projetos"}
             </button>
         </motion.div>
-    );
-};
+    )
+}
 
-export default Portfolio;
+export default Portfolio
