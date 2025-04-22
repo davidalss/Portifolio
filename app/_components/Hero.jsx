@@ -17,7 +17,7 @@ const Hero = () => {
             {/* Info Box */}
             <div className="2xl:max-w-[780px] lg:max-w-full w-auto lg:text-left text-center lg:mt-0 mt-4">
                 <h1 className="xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-semibold xl:leading-[84px] text-text-primary xl:mb-6 mb-3">
-                    Olaa!, Eu sou
+                    Ola!, Eu sou
                     <br />
                     <div className="whitespace-nowrap relative w-fit lg:mx-0 mx-auto">
                         <p className="relative z-10">David Alisson</p>

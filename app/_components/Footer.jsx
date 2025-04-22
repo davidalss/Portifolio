@@ -5,6 +5,8 @@ import logo from '/public/footerLogo.svg';
 import { sections } from './Header';
 import { FaRegCopyright } from 'react-icons/fa';
 
+const formatId = (str) => str.toLowerCase().replace(/\s+/g, '-');
+
 const Footer = () => {
     return (
         <footer className="px-section bg-text-primary lg:py-20 py-10">
@@ -34,7 +36,7 @@ const Footer = () => {
                                     } mx-auto hover:text-primary transition`}
                                 >
                                     <a
-                                        href={'#' + section.toLocaleLowerCase()}
+                                        href={`#${formatId(section)}`}
                                         className="p-3"
                                     >
                                         {section}
