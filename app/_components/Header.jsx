@@ -8,8 +8,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 export const sections = [
     'Pagina Inicial',
     'Sobre',
-    'Process',
-    'portfolio',
+    'Processo',
+    'Portfolio',
     'Serviços',
     'Contato',
 ];

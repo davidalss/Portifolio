@@ -73,7 +73,7 @@ const Icons = () => {
             transition={{ duration: 0.5 }}
             className="container mx-auto px-section py-10"
         >
-            {renderIcons("Front-End", frontIcons)}
+            {renderIcons("Algumas das linguagens, tecnologias e ferramentas que estou aprendendo e aplicando no desenvolvimento.", frontIcons)}
                 </motion.div>
     );
 };

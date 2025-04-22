@@ -25,28 +25,28 @@ const boxes = [
             <MdOutlineEventNote className="text-primary size-[72px] p-5 rounded-md bg-biege/40 group-hover:bg-primary group-hover:text-white transition-all" />
         ),
         title: "1. Planejamento",
-        text: "Analisamos o seu negócio para entender seus objetivos e requisitos, criando um plano estratégico para o desenvolvimento do projeto.",
+        text: "Realizo a análise do seu negócio para entender seus objetivos e requisitos, criando um plano estratégico para o desenvolvimento do projeto.",
     },
     {
         icon: (
             <FaChartBar className="text-primary size-[72px] p-5 rounded-md bg-biege/40 group-hover:bg-primary group-hover:text-white transition-all" />
         ),
         title: "2. Análise de Dados",
-        text: "Coletamos e analisamos dados para identificar oportunidades e desafios, preparando uma estratégia clara para o desenvolvimento.",
+        text: "Coleto e analiso dados para identificar oportunidades e desafios, preparando uma estratégia clara para o desenvolvimento.",
     },
     {
         icon: (
             <FaPencilAlt className="text-primary size-[72px] p-5 rounded-md bg-biege/40 group-hover:bg-primary group-hover:text-white transition-all" />
         ),
         title: "3. Desenvolvimento e Design",
-        text: "Criamos soluções técnicas e designs que atendem às necessidades do usuário, combinando funcionalidade e estética.",
+        text: "Crio soluções técnicas e designs que atendem às necessidades do usuário, combinando funcionalidade e estética.",
     },
     {
         icon: (
             <FaLaptop className="text-primary size-[72px] p-5 rounded-md bg-biege/40 group-hover:bg-primary group-hover:text-white transition-all" />
         ),
         title: "4. Implementação",
-        text: "Realizamos a entrega e o lançamento do projeto, garantindo que todas as soluções funcionem perfeitamente e ofereçam uma experiência fluida.",
+        text: "Realizo a entrega e o lançamento do projeto, garantindo que todas as soluções funcionem perfeitamente e ofereçam uma experiência fluida.",
     },
 ]
 
@@ -56,20 +56,20 @@ const WorkProcess = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            id="process"
+            id="Processo"
             className="bg-section-secondary w-full lg:py-40 py-20 px-section"
         >
             <div className="container mx-auto bg-section-secondary flex lg:flex-row flex-col justify-between gap-8 items-center">
                 {/* info-side */}
                 <div className="lg:max-w-[40%] lg:text-left text-center">
                     <h2 className="lg:text-5xl font-semibold md:text-3xl text-2xl leading-[56px] lg:mb-6 mb-4">
-                        Nosso Processo de Trabalho
+                        Meu Processo de Trabalho
                     </h2>
                     <p className="xl:text-2xl text-lg mb-4 text-text-secondary">
-                        Nossa abordagem garante eficiência e excelência em cada etapa.
+                        Minha abordagem garante eficiência e excelência em cada etapa.
                     </p>
                     <p className="xl:text-2xl text-lg text-text-secondary">
-                        Começamos com uma pesquisa profunda para entender seus objetivos, analisamos dados para criar um plano estratégico, projetamos soluções centradas no usuário e, finalmente, lançamos o projeto com precisão, garantindo uma experiência impecável.
+                    Começo com uma pesquisa profunda para entender meus objetivos, analiso dados para criar um plano estratégico, projeto soluções centradas no usuário e, finalmente, lanço o projeto com precisão, garantindo uma experiência impecável.
                     </p>
                 </div>
                 {/* boxes-side */}
