@@ -6,6 +6,7 @@ import Counters from './Counters';
 import { motion } from 'framer-motion';
 import { FiDownload } from "react-icons/fi";
 
+<section id="pagina inicial"></section>
 const Hero = () => {
     return (
         <motion.div

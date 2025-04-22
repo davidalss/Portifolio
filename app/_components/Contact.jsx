@@ -9,6 +9,8 @@ import Image from "next/image";
 import githubIcon from "/public/icons/github.png";
 import linkedinIcon from "/public/socials/Social-3.svg";
 
+
+<section id="contato"></section>
 // Redes sociais com ícones de imagem
 export const socials = [
   {

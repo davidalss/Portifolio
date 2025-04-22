@@ -1,14 +1,13 @@
-'use client';
+"use client";
 import React, { useEffect, useState } from "react";
 import logo from '@/public/headerLogo.svg';
 import Image from 'next/image';
-import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 export const sections = [
     'Pagina Inicial',
     'Sobre',
-    'Processo',
+    'SoftSkills',
     'Portfolio',
     'Serviços',
     'Contato',
@@ -31,11 +30,19 @@ const Header = () => {
         };
         window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll); // Ajustado
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     const onToggleMenu = () => setToggleMenu((prev) => !prev);
+
+    // Função para rolar até a seção clicada
+    const scrollToSection = (section) => {
+        const element = document.getElementById(section);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <header
@@ -84,12 +91,12 @@ const Header = () => {
                         </li>
                         {sections.map((section) => (
                             <li key={section} onClick={onToggleMenu}>
-                                <Link
-                                    href={'#' + section.toLocaleLowerCase()}
+                                <button
+                                    onClick={() => scrollToSection(section.toLocaleLowerCase())}
                                     className="hover:bg-primary hover:text-white hover:shadow-double rounded xl:px-6 lg:px-4 px-2.5 py-3 text-[#333] transition xl:text-xl lg:text-lg text-base leading-6"
                                 >
                                     {section}
-                                </Link>
+                                </button>
                             </li>
                         ))}
                     </ul>

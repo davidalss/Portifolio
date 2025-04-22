@@ -8,6 +8,7 @@ import ProjectIdea from "./_components/ProjectIdea"
 import WhatIDo from "./_components/WhatIDo"
 import Contact from "./_components/Contact"
 import Footer from "./_components/Footer"
+import SoftSkills from "./_components/WorkProcess"
 
 export default function Home() {
     return (
@@ -16,7 +17,7 @@ export default function Home() {
             <Hero />
             <Icons />
             <Experience />
-            <WorkProcess />
+            <SoftSkills />
             <Portfolio />
             <ProjectIdea />
             <WhatIDo />
@@ -25,3 +26,10 @@ export default function Home() {
         </div>
     )
 }
+
+const scrollToSection = (section) => {
+    const element = document.getElementById(section);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+};
