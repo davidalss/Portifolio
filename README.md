@@ -70,6 +70,6 @@ David Alisson
 
 🎓 Estudante de Análise e Desenvolvimento de Sistemas
 
-🌐 GitHub: https://github.com/DavidSarapiao
+🌐 GitHub: https://github.com/davidalss
 
 📧 Email: davidalss041@gmail.com
