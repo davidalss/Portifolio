@@ -25,12 +25,16 @@ Execute o servidor de desenvolvimento com um dos comandos abaixo:
 bash
 Copiar
 Editar
-npm run dev
+
+npm run de
+v
 # ou
 yarn dev
+
 # ou
 pnpm dev
 # ou
+
 bun dev
 Depois, acesse no navegador:
 
