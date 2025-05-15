@@ -26,11 +26,9 @@ bash
 Copiar
 Editar
 
-npm run de
-v
+npm run dev
 # ou
 yarn dev
-
 # ou
 pnpm dev
 # ou
